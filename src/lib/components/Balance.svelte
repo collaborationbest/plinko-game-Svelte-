@@ -22,7 +22,7 @@ import { mainnet, arbitrum } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 // 1. Get a project ID at https://cloud.reown.com
-const projectId = '553f000f274814b119da5df8651e7ecd'
+const projectId = '9a215fccbadae1b71fd30d85e929458b'
 
 export const networks = [mainnet, arbitrum]
 
