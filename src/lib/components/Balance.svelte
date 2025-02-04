@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
   import { createAppKit } from '@reown/appkit'
 import { SolanaAdapter } from '@reown/appkit-adapter-solana'
 import { solana, solanaTestnet, solanaDevnet } from '@reown/appkit/networks'
@@ -34,13 +34,13 @@ createAppKit({
 
 </script>
 
-<appkit-button></appkit-button> -->
+<appkit-button></appkit-button>
 
 <!-- {#if $walletStore?.connected}
 <div>My balance is {$balance}</div>
 {/if} -->
 
-<script lang="ts">
+<!-- <script lang="ts">
   import { walletStore } from '@svelte-on-solana/wallet-adapter-core';
 	import {
 		workSpace,
@@ -59,4 +59,4 @@ createAppKit({
 
 <WalletProvider {localStorageKey} {wallets} autoConnect />
 <ConnectionProvider {network} />
-<WalletMultiButton />
+<WalletMultiButton /> -->
