@@ -43,8 +43,6 @@
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@playwright/test": "^1.44.0",
-    "@rollup/plugin-inject": "^5.0.5",
-    "@rollup/plugin-json": "^6.1.0",
     "@sveltejs/adapter-static": "^3.0.1",
     "@sveltejs/kit": "^2.5.27",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
@@ -64,9 +62,6 @@
     "prettier": "^3.1.1",
     "prettier-plugin-svelte": "^3.2.6",
     "prettier-plugin-tailwindcss": "^0.6.4",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-globals": "^1.4.0",
-    "rollup-plugin-node-polyfills": "^0.2.1",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "tailwindcss": "^3.4.3",
