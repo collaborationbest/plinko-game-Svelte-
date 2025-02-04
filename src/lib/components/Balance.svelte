@@ -18,30 +18,33 @@
 
 	// let wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()];
 import { createAppKit } from '@reown/appkit'
-import { SolanaAdapter } from '@reown/appkit-adapter-solana'
-import { solana, solanaTestnet, solanaDevnet } from '@reown/appkit/networks'
-import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets'
+import { mainnet, arbitrum } from '@reown/appkit/networks'
+import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
-const solanaWeb3JsAdapter = new SolanaAdapter({
-  wallets: [new PhantomWalletAdapter(), new SolflareWalletAdapter()]
+// 1. Get a project ID at https://cloud.reown.com
+const projectId = '553f000f274814b119da5df8651e7ecd'
+
+export const networks = [mainnet, arbitrum]
+
+// 2. Set up Wagmi adapter
+const wagmiAdapter = new WagmiAdapter({
+  projectId,
+  networks
 })
 
-// 1. Get projectId from https://cloud.reown.com
-const projectId = 'YOUR_PROJECT_ID'
-
-// 2. Create a metadata object - optional
+// 3. Configure the metadata
 const metadata = {
   name: 'AppKit',
-  description: 'AppKit Solana Example',
+  description: 'AppKit Example',
   url: 'https://example.com', // origin must match your domain & subdomain
   icons: ['https://avatars.githubusercontent.com/u/179229932']
 }
 
-// 3. Create modal
-createAppKit({
-  adapters: [solanaWeb3JsAdapter],
-  networks: [solana, solanaTestnet, solanaDevnet],
-  metadata: metadata,
+// 3. Create the modal
+const modal = createAppKit({
+  adapters: [wagmiAdapter],
+  networks: [mainnet, arbitrum],
+  metadata,
   projectId,
   features: {
     analytics: true // Optional - defaults to your Cloud configuration
