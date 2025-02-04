@@ -10,7 +10,7 @@ const solanaWeb3JsAdapter = new SolanaAdapter({
 })
 
 // 1. Get projectId from https://cloud.reown.com
-const projectId = 'ec3f23d26684047304a84d4817a9d9ba'
+const projectId = '4bf5803c915a810ddd3a1160cd200a70'
 
 // 2. Create a metadata object - optional
 const metadata = {
